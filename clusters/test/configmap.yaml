@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: substituted-cm
+  namespace: flux-test
+  labels:
+    leaked-token: "${token}"
+data:
+  note: "postBuild substitution validation test"
